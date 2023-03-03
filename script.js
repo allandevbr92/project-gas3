@@ -70,7 +70,7 @@ calculatorForm.addEventListener('submit', (event) => {
     const kmGasolina = kmLitroGasolina * litros;
     const kmEtanol = kmLitroEtanol * litros;
 
-    resultDiv.innerHTML = `${litros.toFixed(2)} litros de gasolina, irá percorrer ${kmGasolina.toFixed(2)} km.<br>${litros.toFixed(2)} litros de etanol, irá percorrer ${kmEtanol.toFixed(2)} km.`;
+    resultDiv.innerHTML = `${litros.toFixed(1)} litros de gasolina, irá percorrer ${kmGasolina.toFixed(1)} km.<br>${litros.toFixed(1)} litros de etanol, irá percorrer ${kmEtanol.toFixed(1)} km.`;
 });
 
 

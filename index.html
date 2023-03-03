@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <link rel="shortcut icon" href="./imagens/economy.png" type="image/x-icon">
+
+
+
+
     <title>Gasômetro</title>
 
     <style type="text/css">
-
-
-
         .navbar {
             color: yellow !important;
             padding: 10px 0;
@@ -35,9 +37,26 @@
         }
 
         .navbar-brand:hover {
-            color: #00FF00 !important; 
+            color: #00FF00 !important;
             font-size: 28px;
             font-weight: bold;
+        }
+
+
+
+
+        .navbar-toggler {
+            color: #00FF00 !important;
+        }
+
+
+        .navbar-toggler-icon {
+            background-color: #00FF00 !important;
+
+        }
+
+        .card {
+            background: black;
         }
 
 
@@ -68,22 +87,10 @@
             opacity: 1;
         }
 
-
-
-        .navbar-toggler {
-            color: #00FF00 !important;
+        .figure-caption {
+            letter-spacing: 0;
+            word-spacing: -1px;
         }
-
-
-        .navbar-toggler-icon {
-            background-color: #00FF00 !important;
-
-        }
-
-        .card {
-            background: black;
-        }
-        
     </style>
 
 </head>
@@ -126,7 +133,9 @@
                 <div class="card">
 
 
-                    <figcaption class="figure-caption"><small class="small">Insira o preço do litro do etanol e da gasolina nos campos correspondentes, clique no botão "Calcular".O resultado mostrará qual dos dois combustíveis é mais vantajoso do
+                    <figcaption class="figure-caption"><small class="small">Insira o preço do litro do etanol e da
+                            gasolina nos campos correspondentes, clique no botão "Calcular". O resultado mostrará qual
+                            dos combustíveis é mais vantajoso no
                             ponto de vista financeiro.</small></figcaption>
 
                     <div class="card-body">
@@ -169,8 +178,9 @@
                     <hr id="hr-body" class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
 
 
-                    <figcaption class="figure-caption"><small class="small">Insira o valor do seu abastecimento e o preço do litro do combustível utilizado nos campos
-                            correspondentes e clique no botão "Calcular".O resultado mostrará quantos litros de
+                    <figcaption class="figure-caption"><small class="small">Insira o valor do seu abastecimento e o
+                            preço do litro do combustível, e clique no botão "Calcular". O resultado mostrará quantos
+                            litros de
                             combustível você irá abastecer.</small></figcaption>
 
 
@@ -182,7 +192,7 @@
 
                             <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
 
-                            <label class="form-label" for="preco-combustivel">Preço do Litro do Combustível</label>
+                            <label class="form-label" for="preco-combustivel">Valor Litro do Combustível</label>
                             <input type="text" id="preco-combustivel" class="form-control" placeholder="0,00">
 
                             <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
@@ -212,9 +222,9 @@
 
 
 
-                    <figcaption class="figure-caption"><small class="small">Insira o consumo médio de seu veículo em
-                            km/litro para gasolina e etanol, a quantidade de litros utilizada em uma viagem ou percurso
-                            e clique no botão "Calcular".</small>
+                    <figcaption class="figure-caption"><small class="small">Insira o consumo médio do seu veículo em
+                            km/litro por gasolina e etanol, e clique no botão "Calcular". O resultado mostrará quantos
+                            kilometros voce vai rodar pela quantidade de combustivel.</small>
                     </figcaption>
 
 
@@ -242,7 +252,7 @@
                             <div>
                                 <label for="litros" class="form-label">Quantidade de Litros</label>
                                 <input type="number" step="any" class="form-control" id="litros" name="litros"
-                                    placeholder="Litros" required>
+                                    placeholder="Lts" required>
                             </div>
 
                             <button type="submit"
@@ -256,9 +266,7 @@
                     <div class="resposta" id="resultado"></div>
                 </div>
 
-                <hr display="none" class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
-
-
+                <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
 
             </div>
         </div>

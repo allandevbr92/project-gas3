@@ -17,10 +17,9 @@ label {
     margin: 0;
     padding: 0;
     border: none;
-    font-size: 17px;
+    font-size: 16px;
     text-transform: uppercase;
 }
-
 
 .top-bar {
     background-color: black;
@@ -28,6 +27,7 @@ label {
 }
 
 .body {
+    align-items: center;
     padding: 0;
     margin: 0;
     background: black;
@@ -79,12 +79,11 @@ label {
     text-decoration: none;
 }
 
-.card-body {
-    font-size: 18px;
-}
 
 .small {
-    letter-spacing: 1px;    
+    text-align: justify;
+    word-spacing: -1px;
+    letter-spacing: 0px;    
     color: white;
 }
 
@@ -147,7 +146,6 @@ label {
     border: none;
     font-size: 14px;
     text-align: justify;
-    letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -190,11 +188,12 @@ form {
 }
 
 input {
+    
     border-color:  #00FF00 !important;
 }
 
 .resposta {
-    font-size: border;
+    font-size: bold;
     margin: auto;
     text-align: center;
     max-width: 60%;
