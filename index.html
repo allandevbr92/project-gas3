@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Gasômetro</title>
+
+    <style type="text/css">
+
+
+
+        .navbar {
+            color: yellow !important;
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #00FF00 !important; 
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+
+
+        ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #00FF00 !important;
+            background-color: #333 !important;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #00FF00 !important;
+            background-color: #333 !important;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            /* IE 10+ */
+            color: #00FF00 !important;
+            background-color: #333 !important;
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: #00FF00 !important;
+            background-color: #333 !important;
+            opacity: 1;
+        }
+
+
+
+        .navbar-toggler {
+            color: #00FF00 !important;
+        }
+
+
+        .navbar-toggler-icon {
+            background-color: #00FF00 !important;
+
+        }
+
+        .card {
+            background: black;
+        }
+        
+    </style>
+
+</head>
+
+<header class="top-bar">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container col-md-9">
+            <a class="navbar-brand text-white" href="./index.html">GASÔMETRO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: #00FF00;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<body class="body">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-5">
+
+                <hr id="hr-body" class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+
+                <div class="card">
+
+
+                    <figcaption class="figure-caption"><small class="small">Insira o preço do litro do etanol e da gasolina nos campos correspondentes, clique no botão "Calcular".O resultado mostrará qual dos dois combustíveis é mais vantajoso do
+                            ponto de vista financeiro.</small></figcaption>
+
+                    <div class="card-body">
+
+                        <form class="form-group">
+                            <label class="form-label" for="preco-alcool">Valor Litro Etanol</label>
+                            <input type="number" id="preco-alcool" name="preco-alcool" class="form-control" min="0"
+                                step="0.01" required placeholder="0,00" class="form-range">
+
+                            <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+                            <label class="form-label" for="preco-gasolina">Valor Litro Gasolina</label>
+                            <input type="number" id="preco-gasolina" name="preco-gasolina" class="form-control" min="0"
+                                step="0.01" required placeholder="0,00">
+
+                            <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+                            <div><button class="btn btn-lg btn-primary btn-rounded shadow-sm gradient-bg"
+                                    type="submit">Calcular</button></div>
+
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="resposta" id="result"></div>
+
+            </div>
+
+            <div class="col-md-5">
+
+                <div class="card">
+
+                    <hr id="hr-body" class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+
+                    <figcaption class="figure-caption"><small class="small">Insira o valor do seu abastecimento e o preço do litro do combustível utilizado nos campos
+                            correspondentes e clique no botão "Calcular".O resultado mostrará quantos litros de
+                            combustível você irá abastecer.</small></figcaption>
+
+
+                    <div class="card-body">
+
+                        <form class="form-group" id="abastecer-form">
+                            <label class="form-label" for="valor-abastecimento">Valor do Abastecimento</label>
+                            <input type="text" id="valor-abastecimento" class="form-control" placeholder="0,00">
+
+                            <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+                            <label class="form-label" for="preco-combustivel">Preço do Litro do Combustível</label>
+                            <input type="text" id="preco-combustivel" class="form-control" placeholder="0,00">
+
+                            <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+                            <div><button class="btn btn-lg btn-primary btn-rounded shadow-sm gradient-bg"
+                                    type="submit">Calcular</button></div>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="resposta" id="litros-abastecidos" id="litros-label"></div>
+                </div>
+
+            </div>
+
+            <div class="col-md-5">
+
+
+                <div class="card">
+
+                    <hr id="hr-body" class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+
+
+                    <figcaption class="figure-caption"><small class="small">Insira o consumo médio de seu veículo em
+                            km/litro para gasolina e etanol, a quantidade de litros utilizada em uma viagem ou percurso
+                            e clique no botão "Calcular".</small>
+                    </figcaption>
+
+
+                    <div class="card-body">
+                        <form class="form-group" id="calculator">
+
+                            <div>
+                                <label for="km-litro-gasolina" class="form-label">Km/Litro (Gasolina)</label>
+                                <input type="number" step="any" class="form-control" id="km-litro-gasolina"
+                                    placeholder="Km" name="km-litro-gasolina" required>
+                            </div>
+
+
+                            <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+                            <div>
+                                <label for="km-litro-etanol" class="form-label">Km/Litro (Etanol)</label>
+                                <input type="number" step="any" class="form-control" id="km-litro-etanol"
+                                    name="km-litro-etanol" placeholder="Km" required>
+                            </div>
+
+                            <hr class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+
+                            <div>
+                                <label for="litros" class="form-label">Quantidade de Litros</label>
+                                <input type="number" step="any" class="form-control" id="litros" name="litros"
+                                    placeholder="Litros" required>
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-lg btn-primary btn-rounded shadow-sm gradient-bg">Calcular</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="resposta" id="resultado"></div>
+                </div>
+
+                <hr display="none" class="my-3" style="border-width: 1px; border-style:solid; border-color: #00FF00">
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<footer class="footer py-3">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-4 text-center text-md-center" style="color:#00FF00">
+                <a href="https://www.linkedin.com/in/allan-thomaz-9699b5211/" target="_blank" rel="noopener"
+                    class="me-4 text-reset" style="text-decoration:none">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://github.com/allandevbr92" target="_blank" rel="noopener" class="text-reset"
+                    style="text-decoration:none">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+
+
+</html>
